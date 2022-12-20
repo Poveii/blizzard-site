@@ -1,0 +1,195 @@
+/* ====== BANNER HERO SECTION ====== */
+#bannerHero {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/diablo-banner.png) no-repeat top/cover;
+  background-position-x: -320px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 80px;
+  padding-left: 22px;
+}
+
+#bannerHero::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 202px;
+  border-top: #00aeff 3px solid;
+}
+
+#bannerHero .container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 52px;
+}
+
+#bannerHero h1 {
+  width: 284px;
+  font-size: 2.5rem;
+  line-height: 110.2%;
+  margin-bottom: 16px;
+}
+
+#bannerHero p {
+  width: 284px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  letter-spacing: -0.005em;
+  margin-bottom: 32px;
+}
+
+#bannerHero a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+
+  width: 168px;
+  height: 52px;
+
+  background-color: #00aeff;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.5rem;
+  border-radius: 4px;
+}
+
+#bannerHero ul {
+  display: flex;
+  gap: 16px;
+}
+
+#bannerHero ul li img {
+  filter: saturate(0);
+}
+
+#bannerHero ul li:nth-child(1) img {
+  filter: saturate(1);
+}
+
+#bannerHero .aside {
+  display: none;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (min-width: 768px) {
+  #bannerHero {
+    background-position-x: center;
+    padding-top: 96px;
+    padding-left: 58px;
+  }
+
+  #bannerHero::after {
+    width: 320px;
+  }
+
+  #bannerHero .container {
+    gap: 54px;
+    margin-top: 94px;
+  }
+
+  #bannerHero h1 {
+    width: 562px;
+    font-size: 4rem;
+  }
+
+  #bannerHero p {
+    width: max-content;
+  }
+
+  #bannerHero ul {
+    gap: 20px;
+  }
+
+  #bannerHero .aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 36px 38px 0px -164px;
+  }
+
+  #bannerHero .aside span {
+    display: none;
+  }
+
+  #bannerHero .aside .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 86px;
+  }
+
+  #bannerHero .aside .video img:nth-child(1) {
+    position: absolute;
+  }
+
+  #bannerHero .aside .video img:nth-child(2) {
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #bannerHero .container {
+    margin-top: 64px;
+  }
+
+  #bannerHero .aside {
+    margin-right: 38px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #bannerHero {
+    padding-left: 112px;
+  }
+
+  #bannerHero::after {
+    width: 560px;
+  }
+
+  #bannerHero .container {
+    flex-direction: row-reverse;
+    gap: 160px;
+    margin-top: 110px;
+  }
+
+  #bannerHero ul {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+  #bannerHero .aside {
+    margin: 78px 108px 0px 0px;
+  }
+
+  #bannerHero .aside > div {
+    display: grid;
+    gap: 16px;
+  }
+
+  #bannerHero .aside span {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1920px) {
+  #bannerHero {
+    padding-left: 300px;
+    background-position-y: -32px;
+  }
+
+  #bannerHero .aside {
+    margin: 78px 300px 0px 0px;
+  }
+}
