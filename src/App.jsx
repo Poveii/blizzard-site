@@ -1,5 +1,6 @@
 import BannerHero from "./BannerHero";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main>
         <BannerHero></BannerHero>
       </main>
+      <Footer></Footer>
     </div>
   );
 }
