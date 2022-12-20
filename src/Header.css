@@ -1,0 +1,141 @@
+/* ====== HEADER ====== */
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 24px;
+  border-bottom: #ffffff1a 1.5px solid;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 44px;
+  border-top: #00aeff 2px solid;
+}
+
+header .logo {
+  height: 28px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+nav .login {
+  display: none;
+}
+
+.login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 116px;
+  height: 42px;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+
+  padding: 10px 16px;
+  background-color: #00aeff;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.login button.outlined {
+  background-color: transparent;
+  border: 0.8px solid #ffffff;
+}
+
+.menu ul {
+  display: none;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (min-width: 768px) {
+  header {
+    height: 96px;
+    padding-inline: 48px;
+  }
+
+  header .logo {
+    height: 32px;
+  }
+
+  nav .login {
+    display: flex;
+    gap: 16px;
+  }
+
+  .login button {
+    transition: transform 0.4s ease-out;
+  }
+
+  .login button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    padding-inline: 112px;
+    justify-content: flex-start;
+    gap: 120px;
+  }
+
+  header .logo {
+    height: 36px;
+  }
+
+  header nav {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 34px;
+  }
+
+  .menu ul li {
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    display: flex;
+    gap: 14px;
+  }
+
+  .menu ul li,
+  #bannerHero ul li {
+    transition: transform 0.4s ease-out;
+  }
+
+  .menu ul li:hover,
+  #bannerHero ul li:hover {
+    transform: scale(1.08);
+  }
+
+  .menu #menuButton {
+    display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  header {
+    padding-inline: 300px;
+  }
+
+  header .logo {
+    height: 40px;
+  }
+}
