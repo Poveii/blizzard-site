@@ -1,6 +1,6 @@
 /* ====== FOOTER ====== */
 footer {
-  background: url(src/assets/footer-background.png) no-repeat top/cover;
+  background: url(/assets/footer-background.png) no-repeat top/cover;
 
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@ footer .aside {
   overflow: hidden;
   position: relative;
   height: 370px;
-  background: url(src/assets/battlenet-app.png) no-repeat;
+  background: url(/assets/battlenet-app.png) no-repeat;
   background-size: 564px;
   margin-left: -32px;
 }

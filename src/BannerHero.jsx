@@ -12,31 +12,31 @@ function BannerHero() {
 
         <ul>
           <li>
-            <img src="src/assets/diablo-IV-icon.svg" alt="" />
+            <img src="/assets/diablo-IV-icon.svg" alt="" />
           </li>
           <li>
-            <img src="src/assets/heartstone-icon.svg" alt="" />
+            <img src="/assets/heartstone-icon.svg" alt="" />
           </li>
           <li>
-            <img src="src/assets/wow-icon.svg" alt="" />
+            <img src="/assets/wow-icon.svg" alt="" />
           </li>
           <li>
-            <img src="src/assets/diablo-I-icon.svg" alt="" />
+            <img src="/assets/diablo-I-icon.svg" alt="" />
           </li>
           <li>
-            <img src="src/assets/starcraft-icon.svg" alt="" />
+            <img src="/assets/starcraft-icon.svg" alt="" />
           </li>
         </ul>
       </div>
 
       <div className="aside">
-        <img src="src/assets/diablo-IV-logo.png" alt="" id="gameLogo" />
+        <img src="/assets/diablo-IV-logo.png" alt="" id="gameLogo" />
 
         <div>
           <span>Assista ao Trailer</span>
           <div className="video">
-            <img src="src/assets/player-icon.svg" alt="" />
-            <img src="src/assets/diablo-animation-cover.png" alt="" />
+            <img src="/assets/player-icon.svg" alt="" />
+            <img src="/assets/diablo-animation-cover.png" alt="" />
           </div>
         </div>
       </div>

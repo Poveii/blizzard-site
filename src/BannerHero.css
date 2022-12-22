@@ -2,7 +2,7 @@
 #bannerHero {
   width: 100%;
   height: 100vh;
-  background: url(./assets/diablo-banner.png) no-repeat top/cover;
+  background: url(/assets/diablo-banner.png) no-repeat top/cover;
   background-position-x: -320px;
 
   display: flex;
