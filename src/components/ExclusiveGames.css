@@ -1,0 +1,287 @@
+/* ====== GAMES SECTION ====== */
+#exclusivesGames {
+  display: grid;
+  padding-inline: 24px;
+}
+
+#exclusivesGames .header {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: 52px;
+  margin-bottom: 58px;
+}
+
+#exclusivesGames .header span {
+  display: none;
+}
+
+#exclusivesGames .header h2 {
+  width: min-content;
+  font-size: 1.75rem;
+  line-height: 110.2%;
+}
+
+#exclusivesGames .platforms {
+  display: none;
+}
+
+#exclusivesGames .header p {
+  display: inline-flex;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #00aeff;
+}
+
+#exclusivesGames ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 16px;
+  margin-bottom: 70px;
+}
+
+#exclusivesGames ul li {
+  transition: transform 0.4s ease-out;
+}
+
+#exclusivesGames ul li:hover {
+  transform: translateY(-4px);
+}
+
+#exclusivesGames ul li h3,
+#exclusivesGames ul li p {
+  display: none;
+}
+
+#exclusivesGames ul li div {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 213px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+#exclusivesGames ul li img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+#exclusivesGames ul #lastCard div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.8px solid #212428;
+  border-radius: 2px;
+}
+
+#exclusivesGames ul #lastCard:hover {
+  transform: scale(1.02);
+}
+
+#exclusivesGames #lastCard .logo {
+  height: 28px;
+  margin-bottom: 15px;
+}
+
+#exclusivesGames #lastCard span {
+  font-weight: 600;
+  font-size: 0.875rem;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#exclusivesGames #lastCard span img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #exclusivesGames {
+    padding-inline: 50px;
+  }
+
+  #exclusivesGames .header {
+    margin-top: 88px;
+    margin-bottom: 64px;
+  }
+
+  #exclusivesGames .header h2 {
+    font-size: 2rem;
+  }
+
+  #exclusivesGames .header p {
+    font-size: 1rem;
+  }
+
+  #exclusivesGames .platforms {
+    display: flex;
+    gap: 24px;
+  }
+
+  #exclusivesGames ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 38px 32px;
+    margin-bottom: 88px;
+  }
+
+  #exclusivesGames ul li div {
+    height: 291px;
+  }
+
+  #exclusivesGames ul li img {
+    height: 72px;
+    margin-bottom: 30px;
+  }
+
+  #exclusivesGames ul li h3,
+  #exclusivesGames ul li p {
+    display: block;
+    color: #e5e5e5;
+  }
+
+  #exclusivesGames ul li h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+
+  #exclusivesGames ul li p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  #exclusivesGames #lastCard .logo {
+    height: 34px;
+    margin-bottom: 34px;
+  }
+
+  #exclusivesGames #lastCard span {
+    font-size: 1rem;
+  }
+
+  #exclusivesGames #lastCard span img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #exclusivesGames ul li div {
+    height: 394px;
+  }
+
+  #exclusivesGames ul li img {
+    height: 82px;
+    margin-bottom: 38px;
+  }
+
+  #exclusivesGames #lastCard .logo {
+    height: 36px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #exclusivesGames {
+    padding-inline: 112px;
+  }
+
+  #exclusivesGames .header {
+    margin-top: 78px;
+    margin-bottom: 84px;
+  }
+
+  #exclusivesGames .header span {
+    display: flex;
+    align-self: flex-start;
+
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: #8f9199;
+    margin-top: 10px;
+  }
+
+  #exclusivesGames ul {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 48px;
+    margin-bottom: 118px;
+  }
+
+  #exclusivesGames ul li div {
+    height: 380px;
+    border-radius: 4px;
+  }
+
+  #exclusivesGames ul li img {
+    height: 96px;
+    margin-bottom: 36px;
+  }
+
+  #exclusivesGames ul li h3 {
+    font-size: 1.125rem;
+    margin-top: 24px;
+  }
+
+  #exclusivesGames ul li p {
+    margin-top: 4px;
+  }
+
+  #exclusivesGames ul #lastCard div {
+    border-radius: 4px;
+  }
+
+  #exclusivesGames #lastCard .logo {
+    height: 38px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #exclusivesGames {
+    padding-inline: 305px;
+  }
+
+  #exclusivesGames .header {
+    margin: 85px 0px;
+  }
+
+  #exclusivesGames ul {
+    margin-bottom: 108px;
+  }
+
+  #exclusivesGames ul li div {
+    height: 416px;
+  }
+
+  #exclusivesGames ul li img {
+    height: 106px;
+    margin-bottom: 40px;
+  }
+
+  #exclusivesGames ul li h3 {
+    font-size: 1.1875rem;
+  }
+
+  #exclusivesGames ul li p {
+    font-size: 0.9375rem;
+  }
+
+  #exclusivesGames #lastCard .logo {
+    height: 42px;
+  }
+
+  #exclusivesGames #lastCard span {
+    font-size: 1.0625rem;
+  }
+}
