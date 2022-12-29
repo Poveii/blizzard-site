@@ -1,18 +1,24 @@
 import "./ExclusiveGames.css";
 
-const gamesList = await setGamesList();
-async function setGamesList() {
-  const request = await fetch(
-    "https://api-brchallenges.vercel.app/api/blizzard/games"
-  );
-  const data = await request.json();
-
-  data.forEach((item, index) => (item.id = index));
-
-  return data;
-}
+import { useEffect, useState } from "react";
+import getGamesList from "../services/GetGamesList";
 
 function ExclusiveGames() {
+  const [gamesList, setGamesList] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getGamesList().then((items) => {
+      if (mounted) {
+        items.forEach((item, index) => (item.id = index));
+        console.log(items);
+        setGamesList(items);
+      }
+    });
+
+    return () => (mounted = false);
+  }, []);
+
   return (
     <section id="exclusivesGames">
       <div className="header">
