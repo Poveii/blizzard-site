@@ -76,6 +76,7 @@ nav .login {
     background-color: #00aeff;
     color: #ffffff;
     border-radius: 4px;
+    cursor: pointer;
     transition: transform 0.4s ease-out;
   }
 
@@ -115,6 +116,7 @@ nav .login {
 
     display: flex;
     gap: 10px;
+    cursor: pointer;
     transition: transform 0.4s ease-out;
   }
 
