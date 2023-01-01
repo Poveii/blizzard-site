@@ -1,12 +1,20 @@
 /* ====== FOOTER ====== */
 footer {
-  background: url(/assets/footer-background.png) no-repeat top/cover;
-
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
   padding: 64px 0px 62px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background: url(/assets/footer-background.png) no-repeat top;
 }
 
 footer .container {
@@ -69,8 +77,8 @@ footer .container div {
 
 footer .container div p {
   width: 240px;
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
 }
 
 footer .container div p span {
@@ -81,16 +89,15 @@ footer .aside {
   overflow: hidden;
   position: relative;
   height: 370px;
-  background: url(/assets/battlenet-app.png) no-repeat;
-  background-size: 564px;
+  background: url(/assets/battlenet-app.png) no-repeat 0px 0px / 564px;
   margin-left: -32px;
 }
 
 footer .aside img {
-  width: 380px;
   position: absolute;
   right: -100px;
   bottom: -47px;
+  width: 380px;
 }
 
 @media (min-width: 768px) {
@@ -105,7 +112,7 @@ footer .aside img {
   }
 
   footer .container h2 {
-    width: 235px;
+    width: fit-content;
     font-size: 2rem;
   }
 
@@ -167,7 +174,7 @@ footer .aside img {
 
 @media (min-width: 1920px) {
   footer {
-    padding: 24px 0px 72px;
+    padding-top: 24px;
   }
 
   footer .container {
