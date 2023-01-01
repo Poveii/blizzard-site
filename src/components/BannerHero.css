@@ -7,11 +7,26 @@
   background-position-x: -320px;
 
   display: flex;
-  justify-content: space-between;
-
+  position: relative;
   padding-top: 80px;
   padding-left: 22px;
-  transition: all 0.4s ease-in;
+  transition: background 0.4s ease-in;
+}
+
+#bannerHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    73.1% 73.1% at 52.6% 25.14%,
+    #02020300 0%,
+    #020203 71.1%
+  );
+  opacity: 0.25;
+  z-index: 0;
 }
 
 #bannerHero::after {
@@ -26,8 +41,10 @@
 #bannerHero .container {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  margin-top: 52px;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  z-index: 1;
 }
 
 #bannerHero h1 {
@@ -40,7 +57,6 @@
 #bannerHero p {
   width: 284px;
   font-size: 1.125rem;
-  line-height: 1.6875rem;
   letter-spacing: -0.005em;
   margin-bottom: 32px;
 }
@@ -49,10 +65,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 14px 32px;
 
+  width: -moz-fit-content;
   width: fit-content;
-  height: 52px;
 
   background-color: #00aeff;
   color: #ffffff;
@@ -66,8 +83,18 @@
   gap: 16px;
 }
 
+#bannerHero ul li {
+  cursor: pointer;
+  transition: transform 0.4s ease-out;
+}
+
+#bannerHero ul li:hover {
+  transform: scale(1.08);
+}
+
 #bannerHero ul li img {
   filter: saturate(0);
+  transition: filter 0.2s ease-in;
 }
 
 #bannerHero ul li.highlight img {
@@ -81,9 +108,10 @@
 /* ====== MEDIA QUERIES ====== */
 @media (min-width: 768px) {
   #bannerHero {
-    background-position-x: center;
+    background-position-x: -248px;
     padding-top: 96px;
     padding-left: 58px;
+    justify-content: space-between;
   }
 
   #bannerHero::after {
@@ -91,9 +119,8 @@
   }
 
   #bannerHero .container {
-    gap: 54px;
     margin-top: 94px;
-    margin-bottom: 105px;
+    margin-bottom: 100px;
   }
 
   #bannerHero h1 {
@@ -112,10 +139,12 @@
   #bannerHero .aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
-    margin: 32px 32px 0px -212px;
+    margin: 32px 32px 0px -290px;
+    overflow: hidden;
+    z-index: 0;
   }
 
   #bannerHero .aside span {
@@ -127,24 +156,70 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 86px;
+    cursor: pointer;
+    position: relative;
   }
 
-  #bannerHero .aside .video img:nth-child(1) {
+  #bannerHero .aside .video::after {
+    content: "";
+    position: absolute;
+    width: 267px;
+    height: 151px;
+    left: 5px;
+    bottom: -15px;
+    background-color: #020203;
+    opacity: 0.8;
+    filter: blur(10px);
+    border-radius: 4px;
+    z-index: -2;
+  }
+
+  #bannerHero .aside .video > img:nth-child(1) {
     position: absolute;
   }
 
-  #bannerHero .aside .video img:nth-child(2) {
+  #bannerHero .aside .video div {
+    background-image: radial-gradient(
+      97.2% 94.3% at 50.89% 5.7%,
+      rgba(2, 2, 3, 0) 0%,
+      rgb(2 2 3 / 25%) 71.1%
+    );
+
+    display: flex;
     border-radius: 4px;
+  }
+
+  #bannerHero .aside .video div img {
+    z-index: -1;
   }
 }
 
 @media (min-width: 1024px) {
+  #bannerHero {
+    background-position: center;
+  }
+
   #bannerHero .container {
-    margin-top: 64px;
+    margin-top: 72px;
+    margin-bottom: 76px;
   }
 
   #bannerHero .aside {
-    margin-right: 38px;
+    margin-right: 42px;
+  }
+
+  #bannerHero .aside > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  #bannerHero .aside span {
+    display: block;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
   }
 }
 
@@ -165,7 +240,7 @@
 
   #bannerHero ul {
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 34px;
   }
 
   #bannerHero .aside {
@@ -173,19 +248,11 @@
   }
 
   #bannerHero .aside > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     gap: 16px;
   }
 
   #bannerHero .aside span {
-    font-weight: 600;
     font-size: 0.8125rem;
-    text-transform: uppercase;
-
-    display: inline-flex;
-    justify-content: flex-end;
   }
 }
 
@@ -196,6 +263,6 @@
   }
 
   #bannerHero .aside {
-    margin: 78px 300px 0px 0px;
+    margin-right: 300px;
   }
 }
