@@ -20,11 +20,11 @@ function Header() {
           <ul>
             <li>
               Jogos
-              <img src="/assets/arrow-icon.svg" alt="" />
+              <img src="/assets/index-icon.svg" alt="" />
             </li>
             <li>
               Esportes
-              <img src="/assets/arrow-icon.svg" alt="" />
+              <img src="/assets/index-icon.svg" alt="" />
             </li>
             <li>Loja</li>
             <li>Notícias</li>

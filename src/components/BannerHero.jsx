@@ -33,7 +33,10 @@ function BannerHero({ infoGameList, setInfoGameList }) {
         <div className="content">
           <h1>{infoGameList.header}</h1>
           <p>{infoGameList.paragraph}</p>
-          <a href="">{infoGameList.cta}</a>
+          <a href="">
+            <img src="/assets/arrow-icon.svg" alt="" />
+            {infoGameList.cta}
+          </a>
         </div>
 
         <ul>
