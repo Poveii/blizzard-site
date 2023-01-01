@@ -44,7 +44,7 @@ function ExclusiveGames() {
               <li key={item.id}>
                 <div
                   style={{
-                    backgroundImage: `linear-gradient(0deg, rgba(2, 2, 3, 0.4) 2%, rgba(2, 2, 3, 0) 74%), url(${item.image})`,
+                    background: `linear-gradient(0deg, rgba(2, 2, 3, 0.4) 2%, rgba(2, 2, 3, 0) 74%), url(${item.image}) no-repeat center/cover`,
                   }}
                 >
                   <img src={item.logo} alt="" />
