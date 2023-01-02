@@ -11,7 +11,6 @@ function ExclusiveGames() {
     getGamesList().then((items) => {
       if (mounted) {
         items.forEach((item, index) => (item.id = index));
-        console.log(items);
         setGamesList(items);
       }
     });
